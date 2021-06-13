@@ -1,0 +1,87 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (French Version)
+%
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	French
+% ------------------------------------------------------------------------------
+
+\documentclass[t]{beamer}
+
+% suppress navigation bar
+\beamertemplatenavigationsymbolsempty
+
+\mode<presentation>
+{
+	\usetheme{typo3slides}
+}
+
+% global variables
+\title{TYPO3 Version 11.3 - What's New}
+\subtitle{Résumé des nouvelles fonctionnalités, changements et améliorations}
+\author{
+	\centerline{Traduit par~:}
+	\centerline{Pierrick Caillon}
+}
+
+\date{\today}
+
+\begin{document}
+
+% select TYPO3 Share font
+\sharefont
+
+% ------------------------------------------------------------------------------
+% Title Page
+% ------------------------------------------------------------------------------
+
+\begingroup
+	\setbeamercolor{normal text}{fg=white,bg=typo3orange}
+	\setbeamercolor{title}{fg=white}
+	\setbeamercolor{author}{fg=white}
+	\setbeamertemplate{footline}[default]
+	\begin{frame}
+		\titlepage
+	\end{frame}
+\endgroup
+
+% ------------------------------------------------------------------------------
+% Table of Contents
+% ------------------------------------------------------------------------------
+
+\section*{TYPO3 Version 11.3 - What's New}
+\begin{frame}[fragile]
+	\frametitle{Sommaire}
+	\framesubtitle{Sommaire}
+
+	\tableofcontents
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+% Chapter "Introduction"
+\include{Chapters/Introduction/ChapterTitle}
+
+% Chapter "Backend User Interface"
+\include{Chapters/BackendUserInterface/ChapterTitle}
+
+% Chapter "Changes for Integrators and Developers"
+\include{Chapters/ChangesForIntegratorsAndDevelopers/ChapterTitle}
+
+% Chapter "ExtbaseAndFluid"
+\include{Chapters/ExtbaseAndFluid/ChapterTitle}
+
+% Chapter "Deprecated and Removed Functions"
+\include{Chapters/DeprecatedRemovedFunctions/ChapterTitle}
+
+% Chapter "Miscellaneous"
+\include{Chapters/Miscellaneous/ChapterTitle}
+
+% Chapter "Sources and Authors"
+\include{Chapters/SourcesAndAuthors/ChapterTitle}
+\include{Chapters/SourcesAndAuthors/Sources}
+\include{Chapters/SourcesAndAuthors/WhatsNewSlidesAndTranslations}
+
+% ------------------------------------------------------------------------------
+\end{document}
