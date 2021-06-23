@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Important | 94315 | Use proper PSR-3 logging messages and context
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{PSR-3 Logging Messages and Context}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item To fully adhere to the \href{https://www.php-fig.org/psr/psr-3/}{PSR-3 specification},
+			the TYPO3 Core now uses placeholders when executing logging messages:
+\begin{lstlisting}
+$this->logger->alert('Text text text {placeholder} text text.', ['placeholder' => $variable]);
+\end{lstlisting}
+
+		\item We encourage extension developers to review their code and follow
+			the specification
+		\item \textbf{Do not} implement logging this way:
+\begin{lstlisting}
+$this->logger->alert('Text text text ' . $variable . ' text text.');
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
