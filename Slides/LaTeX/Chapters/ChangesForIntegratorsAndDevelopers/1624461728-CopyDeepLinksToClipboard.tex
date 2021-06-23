@@ -13,14 +13,16 @@
 	\framesubtitle{Sharing Backend Links}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
 		\item A new constant \texttt{SHAREABLE\_URL} is available in the UriBuilder
 		\item This lets developers generate deep links (URLs) of pages in the backend.
 		\item For example:
 \begin{lstlisting}
-$uri = $uriBuilder->buildUriFromRoute($routeName, $arguments, UriBuilder::SHAREABLE_URL);
+$uri = $uriBuilder->buildUriFromRoute(
+  $routeName, $arguments, UriBuilder::SHAREABLE_URL
+);
 \end{lstlisting}
 
 	\end{itemize}
