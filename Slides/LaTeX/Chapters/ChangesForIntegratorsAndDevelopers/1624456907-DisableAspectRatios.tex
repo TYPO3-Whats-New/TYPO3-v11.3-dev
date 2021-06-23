@@ -19,7 +19,8 @@
 		\item Setting the key \small"\texttt{disabled}"\normalsize in the TCA
 			deactivates a specific aspect ratio:
 \begin{lstlisting}
-$GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config'] = [
+$GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['assets']['config']
+  ['overrideChildTca']['columns']['crop']['config'] = [
   'cropVariants' => [
     'default' => [
       'allowedAspectRatios' => [
