@@ -10,30 +10,26 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Refresh Dashboard Widgets}
+	\framesubtitle{Refresh Dashboard Widgets (2)}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
-
-	\begin{itemize}
-		\item If implemented, backend users can refresh dashboard widgets:
-	\end{itemize}
-	\vspace{-0.2cm}
-	\begin{figure}
-		\includegraphics[width=0.60\linewidth]{ChangesForIntegratorsAndDevelopers/1624549247-RefreshDashboardWidgets}
-	\end{figure}
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
 		\item Example YAML configuration:
 	\end{itemize}
 \begin{lstlisting}
-dashboard.widget.foobar:
-class: 'TYPO3\CMS\Dashboard\Widgets\RssWidget'
-arguments:
-  ...
-  $options:
+dashboard.widget.foobarWidget:
+  class: 'TYPO3\CMS\Dashboard\Widgets\RssWidget'
+  arguments:
+    $view: '@dashboard.views.widget'
+    $cache: '@cache.dashboard.rss'
+    $options:
+      rssFile: 'https://example.com/rss'
+      lifeTime: 3600
+      refreshAvailable: true
+  tags:
     ...
-    refreshAvailable: true
 \end{lstlisting}
 
 \end{frame}

@@ -1,0 +1,41 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 93210 | Possibility to refresh dashboard widgets
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Refresh Dashboard Widgets (1)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item If implemented, backend users can refresh dashboard widgets:
+	\end{itemize}
+	\vspace{-0.2cm}
+	\begin{figure}
+		\includegraphics[width=0.60\linewidth]{ChangesForIntegratorsAndDevelopers/1624549247-RefreshDashboardWidgets}
+	\end{figure}
+
+	\begin{itemize}
+		\item Example YAML configuration:
+	\end{itemize}
+\begin{lstlisting}
+dashboard.widget.foobar:
+class: 'TYPO3\CMS\Dashboard\Widgets\RssWidget'
+arguments:
+  ...
+  $options:
+    ...
+    refreshAvailable: true
+\end{lstlisting}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
