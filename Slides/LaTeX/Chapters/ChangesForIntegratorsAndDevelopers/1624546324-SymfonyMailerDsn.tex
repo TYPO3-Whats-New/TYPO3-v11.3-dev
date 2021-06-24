@@ -17,18 +17,19 @@
 
 	\begin{itemize}
 		\item Integrators can now configure the Symfony Mailer using DSN:\newline
-			\small
-				\texttt{[MAIL][transport] = dsn}
-			\normalsize
+\begin{lstlisting}
+[MAIL][transport] = 'dsn'
+\end{lstlisting}
 		\item This makes it possible to use any 3rd-party mail transport provider
 			such as Amazon SES, Gmail, MailChimp, and many more
-		\item See \href{https://symfony.com/doc/current/mailer.html}{Symfony documentation}
-			for further details about available providers
-		\item Configuration example:
+		\item Configuration example (Amazon SES):
 \begin{lstlisting}
-$GLOBALS['TYPO3_CONF_VARS']['MAIL']['dsn'] = 'ses+api://ACCESS_KEY:SECRET_KEY@default'
+[MAIL][dsn] = 'ses+api://ACCESS_KEY:SECRET_KEY@default'
 \end{lstlisting}
 
+		\item Dependencies may need to be installed using composer
+		\item See \href{https://symfony.com/doc/current/mailer.html}{Symfony documentation}
+			for further details about available providers
 	\end{itemize}
 
 \end{frame}
