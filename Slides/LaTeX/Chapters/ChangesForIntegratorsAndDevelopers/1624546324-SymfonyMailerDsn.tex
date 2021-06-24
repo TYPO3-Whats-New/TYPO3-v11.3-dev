@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 93668 | Possibility to configure Symfony mailer
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Symfony Mailer}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Integrators can now configure the Symfony Mailer using DSN:\newline
+			\small
+				\texttt{[MAIL][transport] = dsn}
+			\normalsize
+		\item This makes it possible to use any 3rd-party mail transport provider
+			such as Amazon SES, Gmail, MailChimp, and many more
+		\item See \href{https://symfony.com/doc/current/mailer.html}{Symfony documentation}
+			for further details about available providers
+		\item Configuration example:
+\begin{lstlisting}
+$GLOBALS['TYPO3_CONF_VARS']['MAIL']['dsn'] = 'ses+api://ACCESS_KEY:SECRET_KEY@default'
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
