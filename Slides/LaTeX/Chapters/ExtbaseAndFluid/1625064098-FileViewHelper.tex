@@ -1,0 +1,45 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92518 | Introduce FileViewHelper
+
+\begin{frame}[fragile]
+	\frametitle{Extbase and Fluid}
+	\framesubtitle{New \textit{File}-ViewHelper}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item A new ViewHelper is available:\newline
+			\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Fluid\textbackslash
+				ViewHelpers\textbackslash
+				Link\textbackslash
+				FileViewHelper}
+
+		\item The ViewHelper lets extension authors create links to both public
+			and non-public files easily
+		\item For example:
+
+\begin{lstlisting}
+<f:link.file file="{file}" download="true" filename="alternative-name.jpg">Download file</f:link.file>
+\end{lstlisting}
+
+		\item The argument \texttt{file} accepts
+			a \texttt{File} object,
+			a \texttt{FileReference}, or
+			a \texttt{ProcessedFile}
+		\item The argument \texttt{filename} accepts an alternative filename
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
