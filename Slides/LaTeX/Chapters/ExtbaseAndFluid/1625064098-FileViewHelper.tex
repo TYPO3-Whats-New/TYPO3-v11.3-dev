@@ -29,14 +29,16 @@
 		\item For example:
 
 \begin{lstlisting}
-<f:link.file file="{file}" download="true" filename="alternative-name.jpg">Download file</f:link.file>
+<f:link.file file="{file}" download="true"
+  filename="alternative-name.jpg">Download</f:link.file>
 \end{lstlisting}
 
 		\item The argument \texttt{file} accepts
 			a \texttt{File} object,
 			a \texttt{FileReference}, or
 			a \texttt{ProcessedFile}
-		\item The argument \texttt{filename} accepts an alternative filename
+		\item An alternative download file name can be specified using the argument
+			\texttt{filename}
 
 	\end{itemize}
 
