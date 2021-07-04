@@ -16,12 +16,12 @@
 
 	\begin{itemize}
 		\item TYPO3 now limits backend and frontend logins using the Symfony library
-			\href{https://symfony.com/doc/current/rate_limiter.html}{Rate Limiter}
+			"\href{https://symfony.com/doc/current/rate_limiter.html}{Rate Limiter}"
 		\item A PSR-15 middleware now uses the rate limit to block further authentication
-			attempts if too many failed logins from the same IP address are detected
+			attempts if too many failed logins from the same IP address were detected
 		\item This approach replaces the old solution that was not a state-of-the-art
 			implementation from a security perspective
-		\item See
+		\item See the
 			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Feature-93825-IntroduceRateLimiterComponent.html}{changelog}
 			for configuration options, default values, and further details
 	\end{itemize}
