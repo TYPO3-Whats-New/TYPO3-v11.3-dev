@@ -13,15 +13,18 @@
 	\framesubtitle{PSR-7 Request/Response (2)}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
 		\item Extbase actions \textbf{must} return a \texttt{ResponseInterface}
 			in the future
 		\item Extensions are affected if:
-			\item They throw a \texttt{StopActionException}
-			\item Use the method \texttt{redirect()}
-			\item Use the method \texttt{redirectToUri()}
+			\begin{itemize}
+				\item They throw a \texttt{StopActionException}
+				\item Use the method \texttt{redirect()}
+				\item Use the method \texttt{redirectToUri()}
+			\end{itemize}
+		\item Migration example:
 \begin{lstlisting}
 // Code before:
 public function fooAction()
@@ -29,7 +32,7 @@ public function fooAction()
    $this->redirect('otherAction');
 }
 
-// Code after migration:
+// Code after:
 public function fooAction(): ResponseInterface
 {
    return $this->redirect('otherAction');
