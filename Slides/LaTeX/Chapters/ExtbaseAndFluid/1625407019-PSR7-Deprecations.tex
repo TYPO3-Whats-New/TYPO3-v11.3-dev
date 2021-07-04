@@ -27,13 +27,14 @@
 		\item Methods marked as \textbf{deprecated}:
 			\begin{itemize}
 				\item \texttt{getBaseUri()}\newline
-					\small(possible migration: \texttt{\$baseUri = \$normalizedParams->getSiteUrl()})\normalsize
+					\smaller(possible migration: \texttt{\$baseUri = \$normalizedParams->getSiteUrl()})\normalsize
 				\item \texttt{getRequestUri()}\newline
-					\small(possible migration: \texttt{\$requestUrl = \$normalizedParams->getRequestUrl()})\normalsize
+					\smaller(possible migration: \texttt{\$requestUrl = \$normalizedParams->getRequestUrl()})\normalsize
 				\item \texttt{setMethod()}
 			\end{itemize}
-		\item If developers use the \small\texttt{InvalidRequestMethodException}\normalsize
-			in custom extension code, this should be replaced by a custom exception
+		\item Developers should use a custom exception instead of the
+			\small\texttt{InvalidRequestMethodException}\normalsize
+			in their extension code
 
 	\end{itemize}
 

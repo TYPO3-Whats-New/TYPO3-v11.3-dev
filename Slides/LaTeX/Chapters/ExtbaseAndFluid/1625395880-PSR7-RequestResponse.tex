@@ -18,7 +18,7 @@
 	\begin{itemize}
 		\item To follow unified standards and state-of-the-art technologies for
 			extension developers, Extbase should feature a clean request/response
-			handling, following the
+			handling in accordance to the
 			\href{https://www.php-fig.org/psr/psr-7/}{PSR-7 standard}
 		\item Therefore, the class
 			\small\texttt{TYPO3\textbackslash
@@ -27,7 +27,7 @@
 				Mvc\textbackslash
 				Request}\normalsize\newline
 			now implements the PSR-7
-			\small\texttt{ServerRequestInterface}\normalsize
+			\texttt{ServerRequestInterface}
 		\item This lets developers access request-related information from the core
 		\item The interface is, for example, available within Extbase controllers:\newline
 			\texttt{\$this->request}
