@@ -10,21 +10,22 @@
 
 \begin{frame}[fragile]
 	\frametitle{Extbase and Fluid}
-	\framesubtitle{PSR-7 Request/Response}
+	\framesubtitle{PSR-7 Request/Response (1)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
 		\item To follow unified standards and state-of-the-art technologies for
-			extension developers, Extbase should feature a clean
-			\href{https://www.php-fig.org/psr/psr-7/}{PSR-7 Request/Response} handling
+			extension developers, Extbase should feature a clean request/response
+			handling, following the
+			\href{https://www.php-fig.org/psr/psr-7/}{PSR-7 standard}
 		\item Therefore, the class
 			\small\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Extbase\textbackslash
 				Mvc\textbackslash
-				Request}\normalsize
+				Request}\normalsize\newline
 			now implements the PSR-7
 			\small\texttt{ServerRequestInterface}\normalsize
 		\item This lets developers access request-related information from the core

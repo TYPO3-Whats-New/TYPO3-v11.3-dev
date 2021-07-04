@@ -8,29 +8,32 @@
 % ------------------------------------------------------------------------------
 % Deprecation | 94223 | Extbase Request->getBaseUri()
 % Deprecation | 94228 | Deprecate extbase request getRequestUri()
+% Deprecation | 94231 | Deprecate extbase InvalidRequestMethodException
 
 \begin{frame}[fragile]
 	\frametitle{Extbase and Fluid}
-	\framesubtitle{PSR-7 Request/Response}
+	\framesubtitle{PSR-7 Request/Response (2)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item The following Extbase class has been streamlined:\newline
+		\item As part of this move, the following Extbase class has been streamlined:\newline
 			\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Extbase\textbackslash
 				Mvc\textbackslash
 				Request}
 		\item Methods marked as \textbf{deprecated}:
-
 			\begin{itemize}
 				\item \texttt{getBaseUri()}\newline
-					\smaller(possible migration: \texttt{\$baseUri = \$normalizedParams->getSiteUrl()})
-				\item \texttt{getRequestUri()}
-					\smaller(possible migration: \texttt{\$requestUrl = \$normalizedParams->getRequestUrl()})
+					\small(possible migration: \texttt{\$baseUri = \$normalizedParams->getSiteUrl()})\normalsize
+				\item \texttt{getRequestUri()}\newline
+					\small(possible migration: \texttt{\$requestUrl = \$normalizedParams->getRequestUrl()})\normalsize
+				\item \texttt{setMethod()}
 			\end{itemize}
+		\item If developers use the \small\texttt{InvalidRequestMethodException}\normalsize
+			in custom extension code, this should be replaced by a custom exception
 
 	\end{itemize}
 
