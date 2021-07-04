@@ -1,0 +1,30 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 93825 | Introduce rate limiter component
+% https://forge.typo3.org/issues/93825
+% https://review.typo3.org/c/Packages/TYPO3.CMS/+/68624
+
+\begin{frame}[fragile]
+	\frametitle{Miscellaneous}
+	\framesubtitle{Login Throttling}
+
+	\begin{itemize}
+		\item TYPO3 now limits backend and frontend logins using the Symfony library
+			\href{https://symfony.com/doc/current/rate_limiter.html}{Rate Limiter}
+		\item A PSR-15 middleware now uses the rate limit to block further authentication
+			attempts if too many failed logins from the same IP address are detected
+		\item This approach replaces the old solution that was not a state-of-the-art
+			implementation from a security perspective
+		\item See
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Feature-93825-IntroduceRateLimiterComponent.html}{changelog}
+			for configuration options, default values, and further details
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
