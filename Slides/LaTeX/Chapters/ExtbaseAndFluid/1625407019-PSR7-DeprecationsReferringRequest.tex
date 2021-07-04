@@ -6,6 +6,7 @@
 % @link		https://typo3.org/help/documentation/whats-new/
 % @language	English
 % ------------------------------------------------------------------------------
+% Deprecation | 94231 | Deprecate extbase InvalidRequestMethodException
 % Deprecation | 94367 | extbase ReferringRequest
 
 \begin{frame}[fragile]
@@ -16,6 +17,15 @@
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
+		\item Since the method \texttt{setMethod()} has been removed,
+			the following exception is no longer available:\newline
+			\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Extbase\textbackslash
+				Mvc\textbackslash
+				Exception\textbackslash
+				InvalidRequestMethodException}
+
 		\item Also, the following class has been marked \textbf{deprecated}:\newline
 			\texttt{TYPO3\textbackslash
 				CMS\textbackslash
@@ -23,10 +33,6 @@
 				Mvc\textbackslash
 				Web\textbackslash
 				ReferringRequest}
-		\item Extensions only use this class in rare situations
-		\item Use the
-			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/ExtensionScanner/Index.html}{Extension Scanner}
-			to check if your extensions are affected
 
 	\end{itemize}
 \end{frame}

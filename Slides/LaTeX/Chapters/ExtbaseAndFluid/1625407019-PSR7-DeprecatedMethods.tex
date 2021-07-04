@@ -8,7 +8,7 @@
 % ------------------------------------------------------------------------------
 % Deprecation | 94223 | Extbase Request->getBaseUri()
 % Deprecation | 94228 | Deprecate extbase request getRequestUri()
-% Deprecation | 94231 | Deprecate extbase InvalidRequestMethodException
+% Deprecation | 94394 | Extbase Request setDispatched() and isDispatched()
 
 \begin{frame}[fragile]
 	\frametitle{Extbase and Fluid}
@@ -30,11 +30,9 @@
 					\smaller(possible migration: \texttt{\$baseUri = \$normalizedParams->getSiteUrl()})\small
 				\item \texttt{getRequestUri()}\newline
 					\smaller(possible migration: \texttt{\$requestUrl = \$normalizedParams->getRequestUrl()})\small
-				\item \texttt{setMethod()}
+				\item \texttt{setDispatched()}
+				\item \texttt{isDispatched()}
 			\end{itemize}
-		\item Developers should use a custom exception instead of the
-			\small\texttt{InvalidRequestMethodException}\normalsize
-			\tabto{5cm}in their extension code
 
 	\end{itemize}
 
