@@ -12,9 +12,6 @@
 	\frametitle{Extbase and Fluid}
 	\framesubtitle{PSR-7 Request/Response (1)}
 
-	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
-
 	\begin{itemize}
 		\item To follow unified standards and state-of-the-art technologies for
 			extension developers, Extbase should feature a clean request/response
@@ -31,25 +28,9 @@
 		\item This lets developers access request-related information from the core
 		\item The interface is, for example, available within Extbase controllers:\newline
 			\texttt{\$this->request}
-
-% The extbase TYPO3\CMS\Extbase\Mvc\Request now implements the PSR-7 ServerRequestInterface and
-% thus holds all request related information of the main core request in addition to the plugin namespace specific extbase arguments.
-
-% To further prepare extbase towards PSR-7 compatible requests, the extbase TYPO3\CMS\Extbase\Mvc\Request has to be streamlined.
-
-% We have implemented unified standards and state-of-the-art technologies for developers in previous TYPO3 releases by following well-known PSR standards.
-% We kept our promise to continuously improve the TYPO3 ecosystem and had a closer look at which areas we could improve further in this regard.
-
-% To let developers achieve this, Extbase now implements a “ServerRequestInterface”.
-% Accessing request-related information from the core is as easy as pie.
-% The details are all available through $this->request within Extbase controllers.
-% This change also results in a streamlined class “\TYPO3\CMS\Extbase\Mvc\Request” and in several deprecations, for example the methods getRequestUri() and getBaseUri().
-
-% \begin{lstlisting}
-% <f:link.file file="{file}" download="true"
-%   filename="alternative-name.jpg">Download</f:link.file>
-% \end{lstlisting}
-
+		\item See
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Feature-94428-ExtbaseRequestImplementsServerRequestInterface.html}{changelog}
+			for further details
 	\end{itemize}
 
 \end{frame}
