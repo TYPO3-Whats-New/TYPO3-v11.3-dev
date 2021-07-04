@@ -6,7 +6,7 @@
 % @link		https://typo3.org/help/documentation/whats-new/
 % @language	English
 % ------------------------------------------------------------------------------
-% ...
+% Feature | 94428 | Extbase Request implements ServerRequestInterface
 
 \begin{frame}[fragile]
 	\frametitle{Extbase and Fluid}
@@ -16,12 +16,20 @@
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item The following Extbase class now implements the PSR-7 \texttt{ServerRequestInterface}:\newline
-			\texttt{TYPO3\textbackslash
+		\item To follow unified standards and state-of-the-art technologies for
+			extension developers, Extbase should feature a clean
+			\href{https://www.php-fig.org/psr/psr-7/}{PSR-7 Request/Response} handling
+		\item Therefore, the class
+			\small\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Extbase\textbackslash
 				Mvc\textbackslash
-				Request}
+				Request}\normalsize
+			now implements the PSR-7
+			\small\texttt{ServerRequestInterface}\normalsize
+		\item This lets developers access request-related information from the core
+		\item The interface is, for example, available within Extbase controllers:\newline
+			\texttt{\$this->request}
 
 % The extbase TYPO3\CMS\Extbase\Mvc\Request now implements the PSR-7 ServerRequestInterface and
 % thus holds all request related information of the main core request in addition to the plugin namespace specific extbase arguments.
@@ -31,8 +39,6 @@
 % We have implemented unified standards and state-of-the-art technologies for developers in previous TYPO3 releases by following well-known PSR standards.
 % We kept our promise to continuously improve the TYPO3 ecosystem and had a closer look at which areas we could improve further in this regard.
 
-% As many TYPO3 developers know, Extbase is the object-oriented PHP framework heavily used by the TYPO3 Core and for extension development.
-% As extension developers often access information about the current request in their custom code, a clean PSR-7 Request/Response handling is important.
 % To let developers achieve this, Extbase now implements a “ServerRequestInterface”.
 % Accessing request-related information from the core is as easy as pie.
 % The details are all available through $this->request within Extbase controllers.

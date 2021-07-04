@@ -6,7 +6,8 @@
 % @link		https://typo3.org/help/documentation/whats-new/
 % @language	English
 % ------------------------------------------------------------------------------
-% ...
+% Deprecation | 94223 | Extbase Request->getBaseUri()
+% Deprecation | 94228 | Deprecate extbase request getRequestUri()
 
 \begin{frame}[fragile]
 	\frametitle{Extbase and Fluid}
@@ -25,9 +26,10 @@
 		\item Methods marked as \textbf{deprecated}:
 
 			\begin{itemize}
-				\item \texttt{getBaseUri()}
-				\item \texttt{getBaseUri()}
-				\item \texttt{getBaseUri()}
+				\item \texttt{getBaseUri()}\newline
+					\smaller(possible migration: \texttt{\$baseUri = \$normalizedParams->getSiteUrl()})
+				\item \texttt{getRequestUri()}
+					\smaller(possible migration: \texttt{\$requestUrl = \$normalizedParams->getRequestUrl()})
 			\end{itemize}
 
 	\end{itemize}
