@@ -8,6 +8,8 @@
 % ------------------------------------------------------------------------------
 % Deprecation | 94414 | Deprecate LanguageService Container Entry
 % Important | 94312 | Removed BE/loginSecurityLevel and FE/loginSecurityLevel options
+% Deprecation | 94227 | <f:base> ViewHelper
+% Deprecation | 94225 | <f:be.container> ViewHelper
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -24,10 +26,24 @@
 
 		\item The following two options have been removed from TYPO3's default
 			configuration:
-
 			\begin{itemize}
 				\item \texttt{BE/loginSecurityLevel}
 				\item \texttt{FE/loginSecurityLevel}
+			\end{itemize}
+
+		\item The following ViewHelpers been marked as \textbf{deprecated}:
+			\begin{itemize}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Fluid\textbackslash
+					ViewHelpers\textbackslash
+					BaseViewHelper}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Fluid\textbackslash
+					ViewHelpers\textbackslash
+					Be\textbackslash
+					ContainerViewHelper}
 			\end{itemize}
 
 	\end{itemize}
