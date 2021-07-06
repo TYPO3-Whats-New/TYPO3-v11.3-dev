@@ -1,0 +1,47 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92518 | Download and filename options added to FileDumpController
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{\texttt{FileDumpController}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item The \texttt{FileDumpController} accepts two new parameters:
+
+			\begin{itemize}
+				\item \texttt{dl}: force the download of a file
+				\item \texttt{fn}: download the file with an alternative file name
+			\end{itemize}
+
+		\item Code example:
+\begin{lstlisting}
+$queryParameterArray = [
+  'eID' => 'dumpFile',
+  't' => 'f',
+  'f' => $resourceObject->getUid(),
+  'dl' => true,
+  'fn' => 'alternative-filename.jpg'
+];
+$param['token'] = GeneralUtility::hmac(implode('|', $queryParameterArray), 'resourceStorageDumpFile');
+$publicUrl = GeneralUtility::locationHeaderUrl(PathUtility::getAbsoluteWebPath(Environment::getPublicPath() . '/index.php'));
+$publicUrl .= '?' . http_build_query($param, '', '&', PHP_QUERY_RFC3986);
+\end{lstlisting}
+
+		\item A new \textit{File}-ViewHelper can be used to leverage the function\newline
+			\small(see chapter "Extbase and Fluid" for further details)\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
