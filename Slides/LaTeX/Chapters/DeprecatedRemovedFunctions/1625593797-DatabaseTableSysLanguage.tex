@@ -1,0 +1,29 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 94165 | sys_language table
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{Database Table \texttt{sys\_language}}
+
+	\begin{itemize}
+		\item The database table \texttt{sys\_language} has been marked as
+			\textbf{deprecated}
+		\item Site languages used in site configurations are now independent
+			of any \texttt{sys\_language} record
+		\item Developers are advised to read the available languages and
+			associated information from the site configuration
+		\item For example, use the new TCA type \texttt{language} instead of
+			\texttt{foreign\_table => sys\_language}\newline
+			(see \href{https://forge.typo3.org/issues/57082}{\#57082} for details)
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
