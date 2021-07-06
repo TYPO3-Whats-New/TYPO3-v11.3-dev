@@ -21,7 +21,9 @@
 public function drawHeaderHook(array $parameters, PageLayoutController $parentObject)
 {
   $moduleTemplate = $parentObject->getModuleTemplate();
-  $icon = $moduleTemplate->getIconFactory()->getIcon('actions-link', Icon::SIZE_SMALL)
+  $icon = $moduleTemplate->getIconFactory()->getIcon(
+    'actions-link', Icon::SIZE_SMALL
+  );
   $buttonBar = $moduleTemplate->getDocHeaderComponent()->getButtonBar();
   $linkButton = $buttonBar
     ->makeLinkButton()
