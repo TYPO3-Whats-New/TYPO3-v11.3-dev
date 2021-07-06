@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 92358 | Add getModuleTemplate() to PageLayoutController
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{\texttt{PageLayoutController} (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item Example: add a button to the modules' button bar
+\begin{lstlisting}
+public function drawHeaderHook(array $parameters, PageLayoutController $parentObject)
+{
+  $moduleTemplate = $parentObject->getModuleTemplate();
+  $icon = $moduleTemplate->getIconFactory()->getIcon('actions-link', Icon::SIZE_SMALL)
+  $buttonBar = $moduleTemplate->getDocHeaderComponent()->getButtonBar();
+  $linkButton = $buttonBar
+    ->makeLinkButton()
+    ->setHref('/typo3/some/url')
+    ->setTitle('My custom button')
+    ->setClasses('custom-link-class')
+    ->setIcon($icon);
+  $buttonBar->addButton($linkButton);
+}
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
