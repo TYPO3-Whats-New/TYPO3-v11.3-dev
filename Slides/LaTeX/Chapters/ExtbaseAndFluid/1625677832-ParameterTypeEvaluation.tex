@@ -13,21 +13,20 @@
 	\framesubtitle{Parameter Type Evaluation}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
 		\item Extbase's \textit{legacy} type detection of arguments has been
 			marked as \textbf{deprecated}
 		\item Developers should use PHP's type hints in argument lists
-		\item \textbf{Old} code:
+		\item Example (\textbf{old} code):
 \begin{lstlisting}
 /**
  * @param \MyVendor\MyExtension\MyModel $item
  */
 public function myAction($item);
 \end{lstlisting}
-
-		\item Native PHP type declaration:
+			\textbf{new} code:
 \begin{lstlisting}
 public function myAction(\MyVendor\MyExtension\MyModel $item);
 \end{lstlisting}

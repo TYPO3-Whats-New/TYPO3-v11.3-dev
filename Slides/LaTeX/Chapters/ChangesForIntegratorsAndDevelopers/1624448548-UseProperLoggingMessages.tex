@@ -19,8 +19,10 @@
 		\item To fully adhere to the \href{https://www.php-fig.org/psr/psr-3/}{PSR-3 specification},
 			the TYPO3 Core now uses placeholders when executing logging messages:
 \begin{lstlisting}
-$this->logger->alert('Text text text {placeholder} text text.',
-  ['placeholder' => $variable]);
+$this->logger->alert(
+  'Text text text {placeholder} text text.',
+  ['placeholder' => $variable]
+);
 \end{lstlisting}
 
 		\item We encourage extension developers to review their code and follow
