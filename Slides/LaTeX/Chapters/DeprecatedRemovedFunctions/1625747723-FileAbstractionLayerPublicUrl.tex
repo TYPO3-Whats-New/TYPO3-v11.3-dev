@@ -16,9 +16,9 @@
 		\item When accessing \texttt{getPublicUrl()} on a FAL object, the relativ
 			path could be retrieved by setting the following variable:\newline
 			\small\texttt{\$relativeToCurrentScript = true}\normalsize
-		\item Since site handling and URL routing are fully capable of supporting
-			absolute URLs, this approach has been marked as \textbf{deprecated}
-			now
+		\item As this is not required anymore (see further details in the
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Deprecation-94193-PublicUrlWithRelativePathsInFALAPI.html}{changelog}),
+			this has been marked as \textbf{deprecated}
 		\item Accessing \texttt{isRelativeToCurrentScript()} on the
 			\texttt{GeneratePublicUrlForResourceEvent} is also marked as
 			\textbf{deprecated}
