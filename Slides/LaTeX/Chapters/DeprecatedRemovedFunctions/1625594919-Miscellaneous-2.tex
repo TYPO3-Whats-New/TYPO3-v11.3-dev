@@ -15,6 +15,9 @@
 	\frametitle{Deprecated/Removed Functions}
 	\framesubtitle{Miscellaneous (2)}
 
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
 	\begin{itemize}
 		\item The following methodsof the \texttt{GeneralUtility} have been marked
 			as \textbf{deprecated} and will be removed in TYPO3 v12:
@@ -24,13 +27,11 @@
 				\item \texttt{compileSelectedGetVarsFromArray()}
 			\end{itemize}
 
-		\item The first agument \texttt{\$execute} of the following interface has
-			been marked as \textbf{deprecated}:\newline
-				\small\texttt{TYPO3\textbackslash
-					CMS\textbackslash
-					Core\textbackslash
-					Core\textbackslash
-					ApplicationInterface}\normalsize
+		\item The callback function of the method \texttt{run()} (1st argument)
+			of the following interface has been marked as \textbf{deprecated}:
+\begin{lstlisting}
+TYPO3\CMS\Core\Core\ApplicationInterface->run($execute)
+\end{lstlisting}
 
 	\end{itemize}
 
