@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 94193 | Public url with relative paths in FAL API
+
+\begin{frame}[fragile]
+	\frametitle{Deprecated/Removed Functions}
+	\framesubtitle{\texttt{getPublicUrl()} on a FAL Objects}
+
+	\begin{itemize}
+		\item When accessing \texttt{getPublicUrl()} on a FAL object, the relativ
+			path could be retrieved by setting the following variable:\newline
+			\small\texttt{\$relativeToCurrentScript = true}
+		\item Since site handling and URL routing are fully capable of supporting
+			absolute URLs, this approach has been marked as \textbf{deprecated}
+			now
+		\item Accessing \texttt{isRelativeToCurrentScript()} on the
+			\texttt{GeneratePublicUrlForResourceEvent} is also marked as
+			\textbf{deprecated}
+		\item TYPO3's
+			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/ExtensionScanner/Index.html}{Extension Scanner}
+			detects the usage of these cases
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
