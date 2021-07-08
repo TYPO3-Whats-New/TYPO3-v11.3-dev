@@ -1,0 +1,35 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.3 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 94345 | Auto-detect event types
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Event Listener}
+
+	\begin{itemize}
+		\item Event listeners do not require the tag "\texttt{event}"
+			in the file \texttt{Services.yaml} anymore
+		\item TYPO3 automatically detects events based on the type hint in the
+			method signature by using reflection
+		\item The last line in the following is not required anymore:
+
+\begin{lstlisting}
+TYPO3\CMS\Backend\Security\CategoryPermissionsAspect:
+  tags:
+    - name: event.listener
+      identifier: 'backend-user-permissions'
+      method: 'addUserPermissionsToCategoryTreeData'
+      event: TYPO3\CMS\Core\Tree\Event\ModifyTreeDataEvent
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
