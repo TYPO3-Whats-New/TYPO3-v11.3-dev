@@ -9,6 +9,7 @@
 % Important | 94312 | Removed BE/loginSecurityLevel and FE/loginSecurityLevel options
 % Deprecation | 94414 | Deprecate LanguageService Container Entry
 % Deprecation | 94313 | AbstractService class
+% Deprecation | 91806 | BackendUtility viewOnClick
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -30,12 +31,16 @@
 				Localization\textbackslash
 				LanguageService}\normalsize
 
-		\item The following class has been marked as \textbf{deprecated}:
+		\item The following class has been marked as \textbf{deprecated}:\newline
 			\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Core\textbackslash
 				Service\textbackslash
 				AbstractService}
+
+		\item The following method has been marked as \textbf{deprecated}:\newline
+			\texttt{BackendUtility::viewOnClick()}
+
 	\end{itemize}
 
 \end{frame}
