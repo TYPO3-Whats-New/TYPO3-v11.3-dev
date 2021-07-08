@@ -14,16 +14,18 @@
 
 	\begin{itemize}
 		\item The behavior of the following method has changed:\newline
-			\small\texttt{TYPO3\textbackslash
+			\smaller\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Core\textbackslash
 				Utility\textbackslash
 				ArrayUtility::arrayDiffAssocRecursive()}\normalsize
 		\item The function now mimics the behavior of the PHP function
-			\texttt{array\_diff\_key()} as the name suggests
+			\texttt{array\_diff\_assoc()} as the name suggests
 		\item This needs to be enabled by setting the third parameter to
 			\texttt{true} for backwards-compatibility
-
+		\item Developers who require the behavior of the PHP function
+			\texttt{array\_diff\_key()} should use the new method
+			\texttt{arrayDiffAssocRecursive()} of the same class
 	\end{itemize}
 
 \end{frame}
