@@ -6,10 +6,8 @@
 % @link		https://typo3.org/help/documentation/whats-new/
 % @language	English
 % ------------------------------------------------------------------------------
-% Deprecation | 94414 | Deprecate LanguageService Container Entry
 % Important | 94312 | Removed BE/loginSecurityLevel and FE/loginSecurityLevel options
-% Deprecation | 94227 | <f:base> ViewHelper
-% Deprecation | 94225 | <f:be.container> ViewHelper
+% Deprecation | 94414 | Deprecate LanguageService Container Entry
 % Deprecation | 94313 | AbstractService class
 
 \begin{frame}[fragile]
@@ -17,6 +15,13 @@
 	\framesubtitle{Miscellaneous (1)}
 
 	\begin{itemize}
+		\item The following two options have been removed from TYPO3's default
+			configuration:
+			\begin{itemize}
+				\item \texttt{BE/loginSecurityLevel}
+				\item \texttt{FE/loginSecurityLevel}
+			\end{itemize}
+
 		\item The following container entry has been marked as
 			\textbf{deprecated}:\newline
 			\small\texttt{TYPO3\textbackslash
@@ -24,13 +29,6 @@
 				Core\textbackslash
 				Localization\textbackslash
 				LanguageService}\normalsize
-
-		\item The following two options have been removed from TYPO3's default
-			configuration:
-			\begin{itemize}
-				\item \texttt{BE/loginSecurityLevel}
-				\item \texttt{FE/loginSecurityLevel}
-			\end{itemize}
 
 		\item The following class has been marked as \textbf{deprecated}:
 			\texttt{TYPO3\textbackslash
