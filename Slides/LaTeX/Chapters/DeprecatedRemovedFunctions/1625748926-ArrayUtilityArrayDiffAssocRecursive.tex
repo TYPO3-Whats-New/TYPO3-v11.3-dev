@@ -9,23 +9,23 @@
 
 \begin{frame}[fragile]
 	\frametitle{Fonctions dépréciées/retirées}
-	\framesubtitle{Method \texttt{arrayDiffAssocRecursive()}}
+	\framesubtitle{Méthode \texttt{arrayDiffAssocRecursive()}}
 
 	\begin{itemize}
-		\item The behavior of the following method has changed:\newline
+		\item Le comportement de la méthode suivante a changé~:\newline
 			\smaller\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Core\textbackslash
 				Utility\textbackslash
 				ArrayUtility::arrayDiffAssocRecursive()}\normalsize
-		\item The function now mimics the behavior of the PHP function
-			\texttt{array\_diff\_assoc()} as the name suggests
-		\item This needs to be enabled by setting the third parameter to
-			\texttt{true} for backwards-compatibility
+		\item Comme le nom le suggère, elle reproduit le comportement de la fonction PHP
+			\texttt{array\_diff\_assoc()}
+		\item Il est nécessaire d'activer le comportement à l'aide du troisième paramètre à
+			\texttt{true} pour la compatibilité
 			(\texttt{\$useArrayDiffAssocBehavior})
-		\item Developers who require the behavior of the PHP function
-			\texttt{array\_diff\_key()} should use the new method
-			\texttt{arrayDiffKeyRecursive()} of the same class
+		\item Les développeurs qui nécessitent les comportement de la fonction PHP
+			\texttt{array\_diff\_key()} devrait utiliser la méthode
+			\texttt{arrayDiffKeyRecursive()} de la même classe
 	\end{itemize}
 
 \end{frame}

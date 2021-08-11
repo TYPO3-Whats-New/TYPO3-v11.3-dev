@@ -9,21 +9,20 @@
 
 \begin{frame}[fragile]
 	\frametitle{Fonctions dépréciées/retirées}
-	\framesubtitle{\texttt{getPublicUrl()} on FAL Objects}
+	\framesubtitle{\texttt{getPublicUrl()} sur les objets FAL}
 
 	\begin{itemize}
-		\item When accessing \texttt{getPublicUrl()} on a FAL object, the relative
-			path could be retrieved by setting the following variable:\newline
+		\item Lors de l'accès à \texttt{getPublicUrl()} sur un objet FAL, le chemin relatif
+			pouvait être récupéré en définissant la variable suivante~:\newline
 			\small\texttt{\$relativeToCurrentScript = true}\normalsize
-		\item As this is not required anymore (see further details in the
-			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Deprecation-94193-PublicUrlWithRelativePathsInFALAPI.html}{changelog}),
-			this has been marked as \textbf{deprecated}
-		\item Accessing \texttt{isRelativeToCurrentScript()} on the
-			\texttt{GeneratePublicUrlForResourceEvent} is also marked as
-			\textbf{deprecated}
-		\item TYPO3's
-			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/ExtensionScanner/Index.html}{Extension Scanner}
-			detects the usage of these cases
+		\item Comme ce n'est plus requis (en savoir plus dans le
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Deprecation-94193-PublicUrlWithRelativePathsInFALAPI.html}{journal des changements (en)}),
+			c'est marqué comme \textbf{déprécié}
+		\item Accéder à \texttt{isRelativeToCurrentScript()} sur
+			\texttt{GeneratePublicUrlForResourceEvent} est aussi marqué
+			\textbf{déprécié}
+		\item L'\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/ExtensionScanner/Index.html}{Inspecteur d'Extension}
+			de TYPO3 détecte les usages de ces cas
 
 	\end{itemize}
 
