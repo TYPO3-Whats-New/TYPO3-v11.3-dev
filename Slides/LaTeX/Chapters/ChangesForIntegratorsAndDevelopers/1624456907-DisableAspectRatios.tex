@@ -9,14 +9,14 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{Deactivate Aspect Ratios}
+	\framesubtitle{Désactivation de format}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item Setting the key "\texttt{disabled}" in the TCA deactivates
-			a specific aspect ratio:
+		\item Définir la clé "\texttt{disabled}" en TCA désactive
+			un format spécifique~:
 \begin{lstlisting}
 $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['assets']['config']
   ['overrideChildTca']['columns']['crop']['config'] = [

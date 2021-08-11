@@ -9,14 +9,14 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{PSR-3 Logging Messages and Context}
+	\framesubtitle{Messages et contexte de journalisation PSR-3}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item To fully adhere to the \href{https://www.php-fig.org/psr/psr-3/}{PSR-3 specification},
-			the TYPO3 Core now uses placeholders when executing logging messages:
+		\item Pour adhérer entièrement à la \href{https://www.php-fig.org/psr/psr-3/}{spécification PSR-3 (en)},
+			le noyau de TYPO3 utilise des textes à substituer dans les messages à journaliser~:
 \begin{lstlisting}
 $this->logger->alert(
   'Text text text {placeholder} text text.',
@@ -24,9 +24,8 @@ $this->logger->alert(
 );
 \end{lstlisting}
 
-		\item We encourage extension developers to review their code and follow
-			the specification
-		\item \textbf{Do not} implement logging this way:
+		\item Nous encourageons les développeurs à relire leur code et suivre la spécification
+		\item \textbf{Ne pas} implémenter la journalisation de cette manière~:
 \begin{lstlisting}
 $this->logger->alert('Text text text ' . $variable . ' text text.');
 \end{lstlisting}

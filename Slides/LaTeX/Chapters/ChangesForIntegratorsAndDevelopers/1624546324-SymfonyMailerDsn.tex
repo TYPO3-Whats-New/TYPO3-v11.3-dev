@@ -15,20 +15,20 @@
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item Integrators can now configure the Symfony Mailer using DSN:
+		\item Les intégrateurs peuvent configurer le Mailer Symfony Mailer à l'aide d'un DSN~:
 \begin{lstlisting}
 [MAIL][transport] = 'dsn'
 \end{lstlisting}
-		\item This makes it possible to use any 3rd-party mail transport provider
-			such as Amazon SES, Gmail, MailChimp, and many more
-		\item Configuration example (Amazon SES):
+		\item Il est donc possible d'utiliser un fournisseur de messagerie tiers
+			comme Amazon SES, Gmail, MailChimp, et bien d'autres
+		\item Exemple de configuration (Amazon SES)~:
 \begin{lstlisting}
 [MAIL][dsn] = 'ses+api://ACCESS_KEY:SECRET_KEY@default'
 \end{lstlisting}
 
-		\item Dependencies must be to be installed using Composer
-		\item See \href{https://symfony.com/doc/current/mailer.html}{Symfony documentation}
-			for further details about available providers
+		\item Les dépendances doivent être installée avec Composer
+		\item Voir la \href{https://symfony.com/doc/current/mailer.html}{documentation Symfony (en)}
+			pour plus d'information sur les fournisseurs disponibles
 	\end{itemize}
 
 \end{frame}

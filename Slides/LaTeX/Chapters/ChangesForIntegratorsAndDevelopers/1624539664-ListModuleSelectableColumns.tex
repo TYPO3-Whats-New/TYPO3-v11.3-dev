@@ -9,16 +9,16 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{List Module: Selectable Columns}
+	\framesubtitle{Module Liste~: Sélection des colonnes}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item Backend users can now show/hide columns for each table without the
-			need to switch to the single table view
-		\item Integrators can disable the "column selector" for specific tables
-			or for all tables by applying User TSconfig:
+		\item Les utilisateurs backend peuvent choisir les colonnes à afficher pour chaque table
+			sans passer par le mode vue table seule
+		\item Les intégrateurs peuvent désactiver le «~sélecteur de colonne~» pour certaines tables
+			ou pour toutes les tables avec du TSconfig utilisateur~:
 \begin{lstlisting}
 # disable the column selector for the table "tt_content"
 mod.web_list.table.tt_content.displayColumnSelector = 0
