@@ -9,23 +9,22 @@
 
 \begin{frame}[fragile]
 	\frametitle{Extbase et Fluid}
-	\framesubtitle{Parameter Type Evaluation}
+	\framesubtitle{Détermination du type de paramètre}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item Extbase's \textit{legacy} type detection of arguments has been
-			marked as \textbf{deprecated}
-		\item Developers should use PHP's type hints in argument lists
-		\item Example (\textbf{old} code):
+		\item L'ancienne détection de type d'argument d'Extbase est marquée \textbf{dépréciée}
+		\item Les développeurs doivent utiliser les indications de type de PHP dans les listes d'argument
+		\item Exemple (\textbf{ancien} code):
 \begin{lstlisting}
 /**
  * @param \MyVendor\MyExtension\MyModel $item
  */
 public function myAction($item);
 \end{lstlisting}
-			\textbf{new} code:
+			\textbf{nouveau} code:
 \begin{lstlisting}
 public function myAction(\MyVendor\MyExtension\MyModel $item);
 \end{lstlisting}

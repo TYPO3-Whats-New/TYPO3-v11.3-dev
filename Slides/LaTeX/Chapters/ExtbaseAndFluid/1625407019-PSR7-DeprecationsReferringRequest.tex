@@ -10,19 +10,19 @@
 
 \begin{frame}[fragile]
 	\frametitle{Extbase et Fluid}
-	\framesubtitle{PSR-7 Request/Response (4)}
+	\framesubtitle{Requête/Réponse PSR-7 (4)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item Since the method \texttt{setMethod()} has been removed,
-			the following exception is no longer available:
+		\item Comme la méthode \texttt{setMethod()} est retirée,
+			cette exception n'est plus disponible~:
 \begin{lstlisting}
 \TYPO3\CMS\Extbase\Mvc\Exception\InvalidRequestMethodException
 \end{lstlisting}
 
-		\item Also, the following class has been marked as \textbf{deprecated}:
+		\item Aussi, cette classe est marquée \textbf{dépréciée}~:
 \begin{lstlisting}
 \TYPO3\CMS\Extbase\Mvc\Web\ReferringRequest
 \end{lstlisting}

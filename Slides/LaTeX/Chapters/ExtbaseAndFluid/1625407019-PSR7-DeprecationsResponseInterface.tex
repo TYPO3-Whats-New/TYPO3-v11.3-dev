@@ -9,21 +9,20 @@
 
 \begin{frame}[fragile]
 	\frametitle{Extbase et Fluid}
-	\framesubtitle{PSR-7 Request/Response (2)}
+	\framesubtitle{Requête/Réponse PSR-7 (2)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item Extbase actions \textbf{must} return a \texttt{ResponseInterface}
-			in the future
-		\item Extensions are affected if:
+		\item Les actions Extbase \textbf{devront} renvoyer un objet \texttt{ResponseInterface}
+		\item Les extensions sont affectées si~:
 			\begin{itemize}
-				\item They throw a \texttt{StopActionException}
-				\item They use the method \texttt{redirect()}
-				\item They use the method \texttt{redirectToUri()}
+				\item Elles lèvent une \texttt{StopActionException}
+				\item Elles utilisent la méthode \texttt{redirect()}
+				\item Elles utilisent la méthode \texttt{redirectToUri()}
 			\end{itemize}
-		\item Migration example:
+		\item Exemple de migration~:
 \begin{lstlisting}
 // Code before:
 public function fooAction()

@@ -9,16 +9,16 @@
 
 \begin{frame}[fragile]
 	\frametitle{Extbase et Fluid}
-	\framesubtitle{Custom Error Messages for Validation Results}
+	\framesubtitle{Messages personalisés pour les résultats de validation}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item A new method \texttt{addErrorForProperty()} allows developers to
-			add custom error messages
-		\item This applies to properties of Extbase models
-		\item Example in a validator class:
+		\item La méthode \texttt{addErrorForProperty()} permet aux développeurs de
+		    définir des messages personnalisés
+		\item Elle s'applique aux propriété des modèles Extbase
+		\item Exemple dans une classe de validation~:
 \begin{lstlisting}
 public function isValid(): void
 {
