@@ -11,18 +11,17 @@
 
 \begin{frame}[fragile]
 	\frametitle{Divers}
-	\framesubtitle{Login Throttling}
+	\framesubtitle{Protection de l'authentification}
 
 	\begin{itemize}
-		\item TYPO3 now limits backend and frontend logins using the Symfony library
+		\item TYPO3 limite les authentifications backend et frontend avec la bibliothèque Symfony
 			"\href{https://symfony.com/doc/current/rate_limiter.html}{Rate Limiter}"
-		\item A PSR-15 middleware now uses the rate limit to block further authentication
-			attempts if too many failed logins from the same IP address were detected
-		\item This approach replaces the old solution that was not a state-of-the-art
-			implementation from a security perspective
-		\item See the
-			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Feature-93825-IntroduceRateLimiterComponent.html}{changelog}
-			for configuration options, default values, and further details
+		\item Un middleware PSR-15 utilise la limitation de rythme pour bloquer les tentatives de connexion
+			si trop d'échecs depuis la même adresse IP sont détectés
+		\item Cette approche remplace l'ancienne solution qui n'était pas à la pointe d'un point de vue sécurité
+		\item Voir le
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Feature-93825-IntroduceRateLimiterComponent.html}{journal des changements (en)}
+			pour les options de configurations, les valeurs par défaut et plus de détails
 	\end{itemize}
 \end{frame}
 

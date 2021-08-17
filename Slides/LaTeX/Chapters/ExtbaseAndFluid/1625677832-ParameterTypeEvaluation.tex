@@ -17,14 +17,14 @@
 	\begin{itemize}
 		\item L'ancienne détection de type d'argument d'Extbase est marquée \textbf{dépréciée}
 		\item Les développeurs doivent utiliser les indications de type de PHP dans les listes d'argument
-		\item Exemple (\textbf{ancien} code):
+		\item Exemple (\textbf{ancien} code)~:
 \begin{lstlisting}
 /**
  * @param \MyVendor\MyExtension\MyModel $item
  */
 public function myAction($item);
 \end{lstlisting}
-			\textbf{nouveau} code:
+			\textbf{nouveau} code~:
 \begin{lstlisting}
 public function myAction(\MyVendor\MyExtension\MyModel $item);
 \end{lstlisting}
