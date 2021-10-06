@@ -8,17 +8,17 @@
 % Feature | 93921 | Sharing backend links
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Sharing Backend Links}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Teilen von Backend-Links}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item A new constant \texttt{SHAREABLE\_URL} is available in the UriBuilder
-		\item Developers can generate deep links (URLs) of pages in the backend using
-			this constant
-		\item For example:
+		\item Eine neue Konstante \texttt{SHAREABLE\_URL} ist im UriBuilder verfügbar
+		\item Entwickler können mit dieser Konstante Deep Links (URLs) von Seiten im
+			Backend erzeugen
+		\item Zum Beispiel:
 \begin{lstlisting}
 $uri = $uriBuilder->buildUriFromRoute(
   $routeName, $arguments, UriBuilder::SHAREABLE_URL
