@@ -8,17 +8,17 @@
 % Feature | 94218 | Selectable columns per table in record list
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{List Module: Selectable Columns}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Listen-Modul: Wählbare Spalten}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item Backend users can now show/hide columns for each table without the
-			need to switch to the single table view
-		\item Integrators can disable the "column selector" for specific tables
-			or for all tables by applying User TSconfig:
+		\item Backend-Benutzer können jetzt Spalten für jede Tabelle ein-/ausblenden,
+			ohne zur Einzelansicht der Tabelle wechseln zu müssen
+		\item Integratoren können den "column selector" für bestimmte Tabellen oder
+			für alle Tabellen durch Anwendung von User TSconfig deaktivieren:
 \begin{lstlisting}
 # disable the column selector for the table "tt_content"
 mod.web_list.table.tt_content.displayColumnSelector = 0
