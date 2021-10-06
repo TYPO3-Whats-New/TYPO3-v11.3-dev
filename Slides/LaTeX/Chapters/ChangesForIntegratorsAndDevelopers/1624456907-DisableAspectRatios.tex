@@ -8,15 +8,15 @@
 % Important | 93854 | Add disabled option for allowed aspect ratios
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Deactivate Aspect Ratios}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Aspect Ratios deaktivieren}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item Setting the key "\texttt{disabled}" in the TCA deactivates
-			a specific aspect ratio:
+		\item Das Setzen des Schlüssels "\texttt{disabled}" in der TCA deaktiviert
+			ein bestimmtes Seitenverhältnis:
 \begin{lstlisting}
 $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['assets']['config']
   ['overrideChildTca']['columns']['crop']['config'] = [
