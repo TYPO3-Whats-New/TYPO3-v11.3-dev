@@ -8,17 +8,17 @@
 % Feature | 94206 | Add excludePagesRecursive option to XML sitemap generation
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{XML Sitemap}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{XML-Sitemap}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item A new TypoScript configuration \texttt{excludePagesRecursive}
-			has been added to exclude parts of the page tree from the Sitemap
-		\item The option accepts a comma-separated list of page IDs
-		\item For example:
+		\item Eine neue TypoScript-Konfiguration \texttt{excludePagesRecursive}
+			wurde hinzugefügt, um Teile des Seitenbaums von der Sitemap auszuschließen
+		\item Die Option akzeptiert eine kommagetrennte Liste von Seiten-IDs
+		\item Zum Beispiel:
 \begin{lstlisting}
 plugin.tx_seo {
   config {
