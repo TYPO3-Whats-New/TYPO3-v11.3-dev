@@ -8,15 +8,15 @@
 % Feature | 94345 | Auto-detect event types
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Event Listener}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Ereignis-Listener}
 
 	\begin{itemize}
-		\item Event listeners do not require the tag "\texttt{event}"
-			in the file \texttt{Services.yaml} anymore
-		\item TYPO3 automatically detects events based on the type hint in the
-			method signature by using reflection
-		\item The last line in the following example is not required anymore:
+		\item Ereignis-Listener benötigen nicht mehr das Tag "\texttt{event}"
+			in der Datei \texttt{Services.yaml}
+		\item TYPO3 erkennt Ereignisse automatisch anhand des Typ-Hinweises in der
+			Methodensignatur, indem es Reflection verwendet
+		\item Die letzte Zeile im folgenden Beispiel wird nicht mehr benötigt:
 
 \begin{lstlisting}
 TYPO3\CMS\Backend\Security\CategoryPermissionsAspect:
