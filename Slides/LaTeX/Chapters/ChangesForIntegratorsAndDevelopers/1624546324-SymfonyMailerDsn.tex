@@ -8,27 +8,27 @@
 % Feature | 93668 | Possibility to configure Symfony mailer
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
+	\frametitle{Änderungen für Integratoren und Entwickler}
 	\framesubtitle{Symfony Mailer}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item Integrators can now configure the Symfony Mailer using DSN:
+		\item Integratoren können jetzt den Symfony Mailer mit DSN konfigurieren:
 \begin{lstlisting}
 [MAIL][transport] = 'dsn'
 \end{lstlisting}
-		\item This makes it possible to use any 3rd-party mail transport provider
-			such as Amazon SES, Gmail, MailChimp, and many more
-		\item Configuration example (Amazon SES):
+		\item Dies macht es möglich, jeden 3rd-Party Mail-Transport-Anbieter zu verwenden,
+			wie Amazon SES, Gmail, MailChimp und viele mehr
+		\item Konfigurationsbeispiel (Amazon SES):
 \begin{lstlisting}
 [MAIL][dsn] = 'ses+api://ACCESS_KEY:SECRET_KEY@default'
 \end{lstlisting}
 
-		\item Dependencies must be to be installed using Composer
-		\item See \href{https://symfony.com/doc/current/mailer.html}{Symfony documentation}
-			for further details about available providers
+		\item Die Abhängigkeiten müssen mit Composer installiert werden
+		\item Siehe \href{https://symfony.com/doc/current/mailer.html}{Symfony Dokumentation}
+			für weitere Details über verfügbare Anbieter
 	\end{itemize}
 
 \end{frame}
