@@ -8,28 +8,28 @@
 % Feature | 94428 | Extbase Request implements ServerRequestInterface
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{PSR-7 Request/Response (1)}
+	\frametitle{Extbase und Fluid}
+	\framesubtitle{PSR-7 Anfrage/Antwort (1)}
 
 	\begin{itemize}
-		\item To follow unified standards and state-of-the-art technologies for
-			extension developers, Extbase should feature a clean request/response
-			handling in accordance to the
-			\href{https://www.php-fig.org/psr/psr-7/}{PSR-7 standard}
-		\item Therefore, the class
+		\item Um einheitliche Standards und modernste Technologien für
+			Extension-Entwickler zu gewährleisten, sollte Extbase ein sauberes
+			Request/Response-Handling nach dem
+			\href{https://www.php-fig.org/psr/psr-7/}{PSR-7 Standard} bieten
+		\item Daher implementiert die Klasse
 			\small\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Extbase\textbackslash
 				Mvc\textbackslash
 				Request}\normalsize\newline
-			now implements the PSR-7
+			nun das PSR-7
 			\texttt{ServerRequestInterface}
-		\item This lets developers access request-related information from the core
-		\item The interface is, for example, available within Extbase controllers:\newline
+		\item Damit können Entwickler auf Request-bezogene Informationen aus dem Core zugreifen
+		\item Die Schnittstelle ist zum Beispiel innerhalb von Extbase-Controllern verfügbar:\newline
 			\texttt{\$this->request}
-		\item See the
+		\item Siehe das
 			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Feature-94428-ExtbaseRequestImplementsServerRequestInterface.html}{changelog}
-			for further details
+			für weitere Details
 	\end{itemize}
 
 \end{frame}
