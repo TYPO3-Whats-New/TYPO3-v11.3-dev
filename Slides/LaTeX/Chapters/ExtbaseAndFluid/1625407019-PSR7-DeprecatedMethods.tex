@@ -10,27 +10,27 @@
 % Deprecation | 94394 | Extbase Request setDispatched() and isDispatched()
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{PSR-7 Request/Response (3)}
+	\frametitle{Extbase und Fluid}
+	\framesubtitle{PSR-7 Anfrage/Antwort (3)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item As part of this change, the following class has been streamlined:\newline
+		\item Als Teil dieser Änderung wurde die folgende Klasse gestrafft:\newline
 			\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Extbase\textbackslash
 				Mvc\textbackslash
 				Request}
-		\item Methods marked as \textbf{deprecated}:
+		\item Methoden, die als \textbf{veraltet} markiert wurden:
 			\begin{itemize}
 				\item \texttt{getBaseUri()}\newline
-					\smaller(possible migration: \texttt{\$baseUri = \$normalizedParams->getSiteUrl()})\small
+					\smaller(mögliche Migration: \texttt{\$baseUri = \$normalizedParams->getSiteUrl()})\small
 				\item \texttt{getRequestUri()}\newline
-					\smaller(possible migration: \texttt{\$requestUrl = \$normalizedParams->getRequestUrl()})\small
-				\item \texttt{setDispatched()} and \texttt{isDispatched()}\newline
-					\smaller(see \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Deprecation-94394-ExtbaseRequestSetDispatchedAndIsDispatched.html}{changelog} for migration options)\small
+					\smaller(mögliche Migration: \texttt{\$requestUrl = \$normalizedParams->getRequestUrl()})\small
+				\item \texttt{setDispatched()} und \texttt{isDispatched()}\newline
+					\smaller(siehe \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Deprecation-94394-ExtbaseRequestSetDispatchedAndIsDispatched.html}{changelog} für Migrationsoptionen)\small
 			\end{itemize}
 
 	\end{itemize}
