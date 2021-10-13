@@ -8,24 +8,24 @@
 % Deprecation | 94115 | Parameter Type Evaluation via DocBlock comments
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{Parameter Type Evaluation}
+	\frametitle{Extbase und Fluid}
+	\framesubtitle{Parameter Typ Auswertung}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item Extbase's \textit{legacy} type detection of arguments has been
-			marked as \textbf{deprecated}
-		\item Developers should use PHP's type hints in argument lists
-		\item Example (\textbf{old} code):
+		\item Extbase's \textit{Legacy}-Typ-Erkennung von Argumenten
+			wurde als \textbf{veraltet} markiert
+		\item Entwickler sollten PHP's Typ-Hinweise in Argumentlisten verwenden
+		\item Beispiel (\textbf{alter} Code):
 \begin{lstlisting}
 /**
  * @param \MyVendor\MyExtension\MyModel $item
  */
 public function myAction($item);
 \end{lstlisting}
-			\textbf{new} code:
+			\textbf{neuer} Code:
 \begin{lstlisting}
 public function myAction(\MyVendor\MyExtension\MyModel $item);
 \end{lstlisting}
