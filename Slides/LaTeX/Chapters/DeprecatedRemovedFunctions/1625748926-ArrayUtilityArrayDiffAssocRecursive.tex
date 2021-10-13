@@ -8,24 +8,24 @@
 % Deprecation | 94137 | Switch behavior of ArrayUtility::arrayDiffAssocRecursive()
 
 \begin{frame}[fragile]
-	\frametitle{Deprecated/Removed Functions}
-	\framesubtitle{Method \texttt{arrayDiffAssocRecursive()}}
+	\frametitle{Veraltete/entfernte Funktionen}
+	\framesubtitle{Methode \texttt{arrayDiffAssocRecursive()}}
 
 	\begin{itemize}
-		\item The behavior of the following method has changed:\newline
+		\item Das Verhalten der folgenden Methode hat sich geändert:\newline
 			\smaller\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Core\textbackslash
 				Utility\textbackslash
 				ArrayUtility::arrayDiffAssocRecursive()}\normalsize
-		\item The function now mimics the behavior of the PHP function
-			\texttt{array\_diff\_assoc()} as the name suggests
-		\item This needs to be enabled by setting the third parameter to
-			\texttt{true} for backwards-compatibility
-			(\texttt{\$useArrayDiffAssocBehavior})
-		\item Developers who require the behavior of the PHP function
-			\texttt{array\_diff\_key()} should use the new method
-			\texttt{arrayDiffKeyRecursive()} of the same class
+		\item Die Funktion imitiert nun das Verhalten der PHP-Funktion
+			\texttt{array\_diff\_assoc()}, wie der Name schon sagt
+		\item Dies muss durch Setzen des dritten Parameters auf
+			\texttt{true} für die Abwärtskompatibilität
+			(\texttt{\$useArrayDiffAssocBehavior}) aktiviert werden
+		\item Entwickler, die das Verhalten der PHP-Funktion
+			\texttt{array\_diff\_key()} benötigen, sollten die neue Methode
+			\texttt{arrayDiffKeyRecursive()} der gleichen Klasse verwenden
 	\end{itemize}
 
 \end{frame}
