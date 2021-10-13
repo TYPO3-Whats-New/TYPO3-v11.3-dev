@@ -10,19 +10,19 @@
 % https://review.typo3.org/c/Packages/TYPO3.CMS/+/68624
 
 \begin{frame}[fragile]
-	\frametitle{Miscellaneous}
-	\framesubtitle{Login Throttling}
+	\frametitle{Sonstiges}
+	\framesubtitle{Login-Drosselung}
 
 	\begin{itemize}
-		\item TYPO3 now limits backend and frontend logins using the Symfony library
+		\item TYPO3 begrenzt jetzt Backend- und Frontend-Logins mit der Symfony-Bibliothek
 			"\href{https://symfony.com/doc/current/rate_limiter.html}{Rate Limiter}"
-		\item A PSR-15 middleware now uses the rate limit to block further authentication
-			attempts if too many failed logins from the same IP address were detected
-		\item This approach replaces the old solution that was not a state-of-the-art
-			implementation from a security perspective
-		\item See the
+		\item Eine PSR-15-Middleware verwendet nun das Ratenlimit, um weitere Authentifizierungsversuche
+			zu blockieren, wenn zu viele fehlgeschlagene Anmeldungen von derselben IP-Adresse festgestellt wurden
+		\item Dieser Ansatz ersetzt die alte Lösung, die unter Sicherheitsaspekten
+			nicht dem neuesten Stand der Technik entsprach.
+		\item Siehe das
 			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.3/Feature-93825-IntroduceRateLimiterComponent.html}{changelog}
-			for configuration options, default values, and further details
+			 für Konfigurationsoptionen, Standardwerte und weitere Details
 	\end{itemize}
 \end{frame}
 
