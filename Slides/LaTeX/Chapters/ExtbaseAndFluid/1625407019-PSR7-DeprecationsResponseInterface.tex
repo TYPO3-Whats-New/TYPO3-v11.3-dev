@@ -8,22 +8,22 @@
 % Deprecation | 94351 | ext:extbase StopActionException
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{PSR-7 Request/Response (2)}
+	\frametitle{Extbase und Fluid}
+	\framesubtitle{PSR-7 Anfrage/Antwort (2)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item Extbase actions \textbf{must} return a \texttt{ResponseInterface}
-			in the future
-		\item Extensions are affected if:
+		\item Extbase-Aktionen \textbf{müssen} in der Zukunft ein \texttt{ResponseInterface}
+			zurückgeben
+		\item Erweiterungen sind betroffen, wenn:
 			\begin{itemize}
-				\item They throw a \texttt{StopActionException}
-				\item They use the method \texttt{redirect()}
-				\item They use the method \texttt{redirectToUri()}
+				\item sie eine \texttt{StopActionException} auslösen
+				\item sie die Methode \texttt{redirect()} verwenden
+				\item sie die Methode \texttt{redirectToUri()} verwenden
 			\end{itemize}
-		\item Migration example:
+		\item Beispiel für die Migration:
 \begin{lstlisting}
 // Code before:
 public function fooAction()
