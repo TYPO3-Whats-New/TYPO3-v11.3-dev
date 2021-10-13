@@ -8,33 +8,33 @@
 % Feature | 92518 | Introduce FileViewHelper
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{New \textit{File}-ViewHelper}
+	\frametitle{Extbase und Fluid}
+	\framesubtitle{Neuer \textit{File}-ViewHelper}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item A new ViewHelper has been implemented:
+		\item Ein neuer ViewHelper wurde implementiert:
 \begin{lstlisting}
 TYPO3\CMS\Fluid\ViewHelpers\Link\FileViewHelper
 \end{lstlisting}
 
-		\item The ViewHelper lets extension authors create links to both public
-			and non-public files easily
-		\item For example:
+		\item Mit dem ViewHelper können Autoren von Erweiterungen auf einfache
+			Weise Links zu öffentlichen und nicht-öffentlichen Dateien erstellen
+		\item Zum Beispiel:
 
 \begin{lstlisting}
 <f:link.file file="{file}" download="true"
   filename="alternative-name.jpg">Download</f:link.file>
 \end{lstlisting}
 
-		\item The argument \texttt{file} accepts
-			a \texttt{File} object,
-			a \texttt{FileReference}, or
-			a \texttt{ProcessedFile}
-		\item An alternative download file name can be specified using the argument
-			\texttt{filename}
+		\item Das Argument \texttt{file} akzeptiert
+			eine \texttt{File}-Objekt,
+			eine \texttt{FileReference}, oder
+			eine \texttt{ProcessedFile}
+		\item Ein alternativer Name für die Download-Datei kann mit dem Argument
+			\texttt{filename} angegeben werden
 
 	\end{itemize}
 
