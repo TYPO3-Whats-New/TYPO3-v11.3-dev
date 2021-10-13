@@ -8,16 +8,16 @@
 % Feature | 93835 | AddErrorForProperty function for AbstractValidator
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{Custom Error Messages for Validation Results}
+	\frametitle{Extbase und Fluid}
+	\framesubtitle{Benutzerdefinierte Fehlermeldungen für Validierungsergebnisse}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item A new method \texttt{addErrorForProperty()} allows developers to
-			add custom error messages
-		\item This applies to properties of Extbase models
+		\item Eine neue Methode \texttt{addErrorForProperty()} ermöglicht es Entwicklern,
+			benutzerdefinierte Fehlermeldungen hinzuzufügen
+		\item Dies gilt für Eigenschaften von Extbase-Modellen
 		\item Example in a validator class:
 \begin{lstlisting}
 public function isValid(): void
